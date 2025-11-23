@@ -9,7 +9,7 @@ function App() {
         endYear: 2025,
         initialCapital: 100000,
         mode: SimulationMode.FixedReal,
-        withdrawalAmount: 4000,
+        withdrawalAmount: 1600,
         withdrawalRate: 4,
     });
 
