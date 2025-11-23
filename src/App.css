@@ -133,6 +133,75 @@ header p {
     height: 500px;
 }
 
+.transaction-log {
+    margin-top: 2rem;
+}
+
+.transaction-log h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.table-container {
+    background: var(--card-bg);
+    border-radius: 1rem;
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--glass-shadow);
+    overflow: auto;
+    max-height: 500px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    position: sticky;
+    top: 0;
+    background: rgba(15, 23, 42, 0.95);
+    z-index: 1;
+}
+
+th {
+    padding: 1rem;
+    text-align: left;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    border-bottom: 2px solid var(--card-border);
+}
+
+td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--card-border);
+    font-size: 0.9rem;
+}
+
+tbody tr:hover {
+    background: rgba(59, 130, 246, 0.1);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+td.withdrawal {
+    color: #ef4444;
+}
+
+td.positive {
+    color: var(--secondary-color);
+}
+
+td.negative {
+    color: #ef4444;
+}
+
 footer {
     margin-top: 4rem;
     text-align: center;

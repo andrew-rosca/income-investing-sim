@@ -116,6 +116,36 @@ function App() {
                                 </LineChart>
                             </ResponsiveContainer>
                         </div>
+
+                        <div className="transaction-log">
+                            <h2>Transaction Log</h2>
+                            <div className="table-container">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Starting Balance</th>
+                                            <th>Withdrawal</th>
+                                            <th>Market Return</th>
+                                            <th>Ending Balance</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {result.history.map((entry, idx) => (
+                                            <tr key={entry.date}>
+                                                <td>{entry.date}</td>
+                                                <td>{formatCurrency(idx === 0 ? config.initialCapital : result.history[idx - 1].balance)}</td>
+                                                <td className="withdrawal">{formatCurrency(entry.withdrawal)}</td>
+                                                <td className={entry.marketReturn >= 0 ? 'positive' : 'negative'}>
+                                                    {(entry.marketReturn * 100).toFixed(2)}%
+                                                </td>
+                                                <td>{formatCurrency(entry.balance)}</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 )}
             </main>
