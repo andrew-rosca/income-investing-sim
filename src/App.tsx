@@ -7,7 +7,7 @@ function App() {
     const [config, setConfig] = useState<SimulationConfig>({
         startYear: 1995,
         endYear: 2025,
-        initialCapital: 1000000,
+        initialCapital: 100000,
         mode: SimulationMode.FixedReal,
         withdrawalAmount: 4000,
         withdrawalRate: 4,
@@ -34,10 +34,7 @@ function App() {
 
     return (
         <div className="app-container">
-            <header>
-                <h1>Income Investing Simulator</h1>
-                <p>Simulate S&P 500 withdrawal strategies (1995-Present)</p>
-            </header>
+
 
             <main>
                 <div className="controls">
